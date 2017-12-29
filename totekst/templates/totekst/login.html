@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/totekst.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <title>Totekst</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" sizes="192x192" href="https://material.io/static/images/simple-lp/favicons/components-192x192.png">
+    <link rel="shortcut icon" href="https://material.io/static/images/simple-lp/favicons/components-72x72.png">
+  </head>
+
+  <body class="light-blue darken-1">
+        <div class="container">            
+            <div class="login-box">
+                <h1 class="login-title bold">Totekst</h1>
+                {% if error_message %}<p>{{ error_message }}</p>{% endif %}
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s6"><a href="#login" class="active">Login</a></li>
+                            <li class="tab col s6"><a href="#register">Register</a></li>
+                        </ul>
+                    </div>
+                    <div class="trim">
+                            <form action="{% url 'totekst:login_post' %}" method="post" id="login" class="col s12 white">
+                                {% csrf_token %}
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" name="email" type="email" class="validate">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                        <input id="password" name="password"  type="password" class="validate">
+                                        <label for="password">Password</label>
+                                        </div>
+                                    </div>   
+                                    <div class="row">
+                                        <div class="col s12 button-wrapper">
+                                            <button class="btn waves-effect waves-light btn-large light-blue darken-1 center_horizontal" type="submit" name="login">Login
+                                                    <i class="material-icons right">lock_open</i>
+                                            </button>  
+                                        </div>
+                                    </div>
+                                                           
+                                        
+                                </form>
+                    </div>
+                    <div class="trim">
+                            <form id="register" class="col s12 white">
+
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                        <input id="first_name" name="first_name" type="text" class="validate">
+                                        <label for="first_name">First name</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="last_name" name="last_name" type="text" class="validate">
+                                            <label for="last_name">Last name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="new_email" name="new_email" type="email" class="validate">
+                                            <label for="new_email">Email</label>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                        <input id="new_password" name="new_password" type="password" class="validate">
+                                        <label for="new_password">Password</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                                <input id="confirm_password" type="password" class="validate">
+                                                <label for="confirm_password">Confirm Password</label>
+                                                </div>
+                                    </div>   
+                                    <div class="row">
+                                        <div class="col s12 button-wrapper">
+                                            <button class="btn waves-effect waves-light btn-large light-blue darken-1 center_horizontal" type="submit" name="register">Register
+                                                    <i class="material-icons right">folder</i>
+                                            </button>  
+                                        </div>
+                                    </div>
+                                                           
+                                        
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/totekst.js"></script>
+  </body>
+</html>

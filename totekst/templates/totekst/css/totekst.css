@@ -1,0 +1,69 @@
+.login-box {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 10% auto;
+}
+
+h1.login-title{
+    color:#ffffff;
+    text-align: center; 
+}
+.trim{
+    width: 95.8%;
+    margin-left:11px; 
+}
+#login{ 
+    padding-bottom:10px;
+    background-color: #ffffff;
+}
+
+.form-elements{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.button-wrapper{
+    text-align: center;
+}
+.center_horizontal{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.convert-box
+{
+    margin-top: 40px;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.steps
+{
+    margin-top: 100px;
+}
+
+.steps h4{
+    text-align: center;
+}
+.step
+{
+    color: #ffffff;
+}
+.step i {
+    padding-top: 30px;
+    margin: 10px auto;
+    color: #ffffff;
+    font-size: 7rem;
+    display: block;
+}
+
+.step-caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #ffffff;
+}
