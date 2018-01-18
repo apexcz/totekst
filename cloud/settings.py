@@ -25,7 +25,7 @@ SECRET_KEY = '1*9it5m8^8tkgo_0*0iyo3^*ktlk3a1@x1z0(aacn^v%=o#cx_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['totekst-189610.appspot.com']
 
 
 # Application definition
@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'cloud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': '', #'django.db.backends.sqlite3',
+        'NAME': '' #os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static'
+
+MAX_UPLOAD_SIZE = "5242880"
+
+FILE_UPLOAD_HANDLERS = ('django.core.files.uploadhandler.MemoryFileUploadHandler',)
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880

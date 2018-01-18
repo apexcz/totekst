@@ -1,9 +1,11 @@
-from  django.urls import path
+#from  django.urls import path
+from django.conf.urls import include, url
 from . import views
 
-app_name = 'totekst'
+#app_name = 'totekst'
 urlpatterns = [
-    path('',views.login,name='login'),
-    path('login_post',views.login_post,name='login_post'),
-    path('home/<str:email>',views.home,name='home'),
+    url(r'^$',views.login,name='login'),
+    url('convert',views.convert,name='convert'),
+    url(r'^(?P<email>[^/]+)/home/$',views.home,name='home'),
+    url(r'^loaderio-*', views.loaderio, name='loaderio')
 ]
